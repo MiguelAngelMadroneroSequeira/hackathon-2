@@ -26,20 +26,6 @@ public class Agenda {
     contactos.add(contacto);
     return true;
   }
-//  public void agregarContacto(Contacto contacto){
-//
-//    if(contactos.size() >=capacidad){
-//      agendaLlena();
-//    }else if(contactos.contains(contacto)){
-//      System.out.println("El contacto ya existe, no se puede añadir este contacto");
-//    }else{
-//      System.out.println("contacto agregado...");
-//
-//      contactos.add(contacto);
-//
-//    }
-//
-//  }
 
   public void existeContacto(Contacto contacto){
 

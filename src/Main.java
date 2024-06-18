@@ -10,15 +10,16 @@ public class Main {
     // to see how IntelliJ IDEA suggests fixing it.
     Agenda agenda = new Agenda();
 //
+    //Datos precargados
     agenda.agregarContacto(new Contacto("Miguel", "3137613879"));
     agenda.agregarContacto(new Contacto("Andrés", "3137613234"));
     agenda.agregarContacto(new Contacto("Juan", "3137613234"));
-    agenda.agregarContacto(new Contacto("Carlos", "3137613234"));
-    agenda.agregarContacto(new Contacto("Plinio", "3137613234"));
-    agenda.agregarContacto(new Contacto("Mateo", "3137613234"));
-    agenda.agregarContacto(new Contacto("Alejandro", "3137613234"));
-    agenda.agregarContacto(new Contacto("Ana", "3137613234"));
-    agenda.agregarContacto(new Contacto("Maria", "3137613234"));
+//    agenda.agregarContacto(new Contacto("Carlos", "3137613234"));
+//    agenda.agregarContacto(new Contacto("Plinio", "3137613234"));
+//    agenda.agregarContacto(new Contacto("Mateo", "3137613234"));
+//    agenda.agregarContacto(new Contacto("Alejandro", "3137613234"));
+//    agenda.agregarContacto(new Contacto("Ana", "3137613234"));
+//    agenda.agregarContacto(new Contacto("Maria", "3137613234"));
 //    agenda.agregarContacto(new Contacto("Jenny", "3137613234"));
 //    agenda.agregarContacto(new Contacto("Alexa", "3137613234"));
 
@@ -27,19 +28,6 @@ public class Main {
 
 
 
-//  for(Contacto contacto: agenda.contactos){
-//    System.out.println(contacto.getNombre());
-//    System.out.println(contacto.getNumero());
-//  }
-
-//  agenda.listarContactos();
-//    agenda.buscarContacto("pepe");
-
-//    agenda.eliminarContacto("Miguel");
-
-//    agenda.espacioLibre();
-//    agenda.agregarContacto(new Contacto("Miguel", "3137613879"));
-//    agenda.listarContactos();
 
 
 
@@ -80,9 +68,7 @@ public class Main {
           System.out.println("Verificar contacto: ");
           System.out.println("Agregue el nombre del contacto a verificar su existencia");
            nombre=scanner.nextLine();
-          System.out.println("Agregue el numero de telefono del contacto a verificar su existencia");
-           numero= scanner.nextLine();
-          agenda.existeContacto(new Contacto(nombre, numero));
+          agenda.existeContacto(new Contacto(nombre, null));
 
           break;
 
@@ -107,10 +93,10 @@ public class Main {
         case 6:
           System.out.println("Espacio disponible en agenda: ");
           agenda.espacioLibre();
+          break;
 
         case 7:
           System.out.println("Agenda cerrada");
-          scanner.close();
 
           break;
 
@@ -118,5 +104,7 @@ public class Main {
       }
 
     }while (opcion!=7);
+    scanner.close();
+
   }
 }
